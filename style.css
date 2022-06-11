@@ -1,0 +1,58 @@
+
+body{
+  background: -webkit-linear-gradient(left, #e2c5f4, #8d3bae);
+  background: linear-gradient(to right, #e2c5f4, #8d3bae);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+.img-div{display: inline-block;}
+
+
+h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+/*---الحيوانات--*/
+.product-lbl{
+	text-align: center;
+    display: flow-root;
+    font-size: 20px;
+	color: indigo;
+    font-family: cursive;
+}
+.ad-img{
+	width:300px;
+	height: 200px;
+	transition: all ease-in-out .3s;
+	margin: 20px;
+	
+	
+	  }
+	  .ad-img:hover{
+		  transform: scale(1.2,1.2);
+		  box-shadow: black 3px 3px 10px;
+		  opacity: 100%;
+		  cursor: grab;
+	  }
+/*-------------numbers----------=[*/
+.ad-img2{
+	height: 350px;
+	width:200px;
+	transition: all ease-in-out .3s;
+	margin: 20px;
+
+	
+	  }
+	  .ad-img2:hover{
+		transform: scale(1.2,1.2);
+		box-shadow: black 3px 3px 10px;
+		opacity: 100%;
+		cursor: grab;
+	}
