@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+
+  <title>اصوات الحيوانات</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<script>
+
+function changeImg3(x, y) {
+    var image = document.getElementById(y);
+    if (image.src.match("media/" + x + ".png")) {
+      image.src = "media/" + x + "2.png";
+    }
+    else {
+      image.src = "media/" + x + ".png";
+    }
+  }
+
+
+
+  var isPlaying = true;
+  var soundPlayer; 
+  function playSound(a) { 
+     
+    if (isPlaying) { 
+      
+      soundPlayer = new  Audio('media/' + a + '.mp3');
+      soundPlayer.play();
+      isPlaying = false; 
+    } 
+    else if (!isPlaying) { 
+      isPlaying = true; 
+       
+      soundPlayer.pause(); 
+      soundPlayer.currentTime = 0
+
+      soundPlayer = new  Audio('media/' + a + '.mp3'); 
+      soundPlayer.play(); 
+      isPlaying = false; 
+    }
+  }
+
+
+
+
+
+</script>
+
+<body>
+  <h1> اصوات الحيوانات</h1>
+  
+  <div class="ad-div">
+    <div class="img-div"  onclick="playSound('duck')"> <img class="ad-img" id="changer1"  onclick="changeImg3('duck','changer1')" src="media/duck.png" alt=""><label class="product-lbl">بطة</label></div>
+    <div class="img-div"  onclick="playSound('lion')"> <img class="ad-img" id="changer2"  onclick="changeImg3('lion','changer2')" src="media/lion.png" alt=""><label class="product-lbl">الاسد</label>    </div>
+    <div class="img-div" onclick="playSound('chick')" > <img class="ad-img" id="changer3" onclick="changeImg3('chick','changer3')" src="media/chick.png" alt=""><label class="product-lbl">كتكوت</label>
+    </div>
+    <div class="img-div" onclick="playSound('pig')"> <img class="ad-img" id="changer4" onclick="changeImg3('pig','changer4')"
+        src="media/pig.png" alt=""><label class="product-lbl">خنزير</label></div>
+    <div class="img-div" onclick="playSound('frog')"> <img class="ad-img" id="changer5"
+        onclick="changeImg3('frog','changer5')" src="media/frog.png" alt=""><label class="product-lbl">ضفدع</label>
+    </div>
+    <div class="img-div" onclick="playSound('dog')"> <img class="ad-img" id="changer6" onclick="changeImg3('dog','changer6')"
+        src="media/dog.png" alt=""><label class="product-lbl">كلب</label></div>
+    <div class="img-div" onclick="playSound('donkey')"> <img class="ad-img" id="changer7"
+        onclick="changeImg3('donkey','changer7')" src="media/donkey.png" alt=""><label class="product-lbl">حمار</label>
+    </div>
+    <div class="img-div" onclick="playSound('monkey')"> <img class="ad-img" id="changer8"
+        onclick="changeImg3('monkey','changer8')" src="media/monkey.png" alt=""><label class="product-lbl">قرد</label>
+    </div>
+
+  </div>
+
+ 
+
+ 
+
+
+</body>
+
+</html>

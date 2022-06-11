@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+
+  <title>Numbers</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<script>
+
+function changeImg3(x, y) {
+    var image = document.getElementById(y);
+    if (image.src.match("media/" + x + ".png")) {
+      image.src = "media/" + x + "2.png";
+    }
+    else {
+      image.src = "media/" + x + ".png";
+    }
+  }
+
+
+  // var lion = new Audio('lion.mp3');
+  // var duck=new Audio('duck.mp3');
+  // var chick = new Audio('media/chick.mp3');
+  // var four = new Audio('media/four.mp3');
+  // var six = new Audio('media/six.mp3');
+  // var five = new Audio('media/five.mp3');
+  // var seven = new Audio('media/seven.mp3');
+  // var eight = new Audio('media/eight.mp3');
+
+
+
+
+
+  var isPlaying = true;
+  var soundPlayer; 
+  function playSound(a) { 
+     
+    if (isPlaying) { 
+      
+      soundPlayer = new  Audio('media/' + a + '.M4A');
+      soundPlayer.play();
+      isPlaying = false; 
+    } 
+    else if (!isPlaying) { 
+      isPlaying = true; 
+       
+      soundPlayer.pause(); 
+      soundPlayer.currentTime = 0
+
+      soundPlayer = new  Audio('media/' + a + '.M4A'); 
+      soundPlayer.play(); 
+      isPlaying = false; 
+    }
+  }
+
+
+
+
+
+</script>
+
+<body>
+  <h1> Learn My Numbers</h1>
+  
+  <div class="ad-div">
+    <div class="img-div"  onclick="playSound('one')"> <img class="ad-img2" id="changer1"  onclick="changeImg3('one','changer1')" src="media/one.png" alt=""><label class="product-lbl">one</label></div>
+    <div class="img-div"  onclick="playSound('two')"> <img class="ad-img2" id="changer2"  onclick="changeImg3('two','changer2')" src="media/two.png" alt=""><label class="product-lbl">two</label>    </div>
+    <div class="img-div" onclick="playSound('three')" > <img class="ad-img2" id="changer3" onclick="changeImg3('three','changer3')" src="media/three.png" alt=""><label class="product-lbl">three</label>
+    </div>
+    <div class="img-div" onclick="playSound('four')"> <img class="ad-img2" id="changer4" onclick="changeImg3('four','changer4')"
+        src="media/four.png" alt=""><label class="product-lbl">four</label></div>
+    <div class="img-div" onclick="playSound('five')"> <img class="ad-img2" id="changer5"
+        onclick="changeImg3('five','changer5')" src="media/five.png" alt=""><label class="product-lbl">five</label>
+    </div>
+    <div class="img-div" onclick="playSound('six')"> <img class="ad-img2" id="changer6" onclick="changeImg3('six','changer6')"
+        src="media/six.png" alt=""><label class="product-lbl">six</label></div>
+    <div class="img-div" onclick="playSound('seven')"> <img class="ad-img2" id="changer7"
+        onclick="changeImg3('seven','changer7')" src="media/seven.png" alt=""><label class="product-lbl">Seven</label>
+    </div>
+    <div class="img-div" onclick="playSound('eight')"> <img class="ad-img2" id="changer8"
+        onclick="changeImg3('eight','changer8')" src="media/eight.png" alt=""><label class="product-lbl">Eight</label>
+    </div>
+    <div class="img-div" onclick="playSound('nine')"> <img class="ad-img2" id="changer9"
+      onclick="changeImg3('nine','changer9')" src="media/nine.png" alt=""><label class="product-lbl">Nine</label>
+  </div>
+  </div>
+
+ 
+
+ 
+
+
+</body>
+
+</html>
